@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>森の工房 [Forest Studio] - 森の工房について</title>
+
+<meta name="viewport" content="width=device-width">
+
 <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
 
 <style>
@@ -156,7 +159,7 @@ footer	    {color: #888888;
 			clear:both;
 			border-top: solid 1px #aaaaaa;}
 
-small       {font-size: 0.75em;
+small       {font-size: 10px;
 			font-style: normal;
 			text-align: left;
 			display: block;}
@@ -199,6 +202,9 @@ article section figcaption
 
 article section:nth-of-type(odd) figcaption{text-align: right;}
 
+/* ====== PC用の設定 ====== */
+@media only screen and (min-width:900px) {
+
 /* 3段組み */
 article div[itemprop="articleBody"] {display: -webkit-box;
 	display: -moz-box;
@@ -225,7 +231,62 @@ article section {color: none;
 	position: relative;}
 article section + section + section {margin-right: 0;}
 
+}
 
+/* ====== タブレット用の設定 ====== */
+@media only screen and (min-width:600px)and(max-width:899px) {
+div#container {width: 100%;
+		box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		padding: 0 10px;
+		background-position: -3px 380px, 100px 460px;}
+
+header#pageheader img {width: 100%;
+		height: auto;}
+
+nav ul {font-size: 10px;}
+
+nav ul li a {width: 100px;}
+
+}
+
+/* ====== スマートフォン用の設定 ====== */
+@media only screen and (max-width: 599px){
+
+div#container {width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;}
+	padding: 0 10px;
+	background-position: -3px 220px, 100px 280px;}
+header#pageheader img {width: 100%;
+		height: auto;}
+nav ul {font-size: 8px;}
+
+nav ul li a {width: auto;
+		display: inline-block;
+		padding: 0 3px;}
+
+header#pageheader h1 {font-size: 24px;
+	    margin-right: 15px;}
+
+header#pageheader h2 {font-size: 10px;
+		text-align: left;
+		padding: 0;}
+
+article header h1 {float: none;}
+
+article header p {margin: 0;}
+
+article section:nth-of-type(1n) figure{float: none;
+		margin: 0;
+		text-align: center;
+		display: block;}
+
+article section:nth-of-type(1n) figcaption{text-align: center;margin-bottom: 15px;}
+
+}
 </style>
 
 
